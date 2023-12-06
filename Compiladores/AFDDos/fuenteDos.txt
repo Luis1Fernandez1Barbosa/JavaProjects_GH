@@ -1,0 +1,7 @@
+aaaaabbb;
+abb;
+abababb;
+ababababbbb;
+aaaaaaaaaababb;
+bbbaabbbbbbab;
+bbaaababb;

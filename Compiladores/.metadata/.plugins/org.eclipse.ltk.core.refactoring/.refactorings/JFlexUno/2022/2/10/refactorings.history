@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;JFlexUno/Config.txt&apos; to &apos;Conf.txt&apos;" description="Rename resource &apos;Config.txt&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Config.txt" name="Conf.txt" stamp="1646062181742" updateReferences="true"/>
+</session>

@@ -1,0 +1,3 @@
+not (true or false);
+a:= true;
+b:= false or true;

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;fuenteLex&apos; to &apos;JFlexUno&apos;" description="Move &apos;fuenteLex&apos; to &apos;JFlexUno&apos;" destination="/JFlexUno" element1="jar/fuenteLex" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1646631819426" updateReferences="true"/>
+</session>

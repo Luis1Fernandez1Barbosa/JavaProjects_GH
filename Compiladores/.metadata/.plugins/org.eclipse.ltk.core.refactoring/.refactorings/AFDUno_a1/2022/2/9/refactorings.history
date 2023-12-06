@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;fes.aragon.test.TestAFDUno&apos; to &apos;TestUnoA1&apos;&#x0D;&#x0A;- Original project: &apos;AFDUno_a1&apos;&#x0D;&#x0A;- Original element: &apos;fes.aragon.test.TestAFDUno&apos;&#x0D;&#x0A;- Renamed element: &apos;fes.aragon.test.TestUnoA1&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Rename similarly named elements&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;TestAFDUno&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;fes.aragon.test{TestAFDUno.java[TestAFDUno" matchStrategy="1" name="TestUnoA1" qualified="false" references="true" similarDeclarations="true" stamp="1645598607106" textual="false" version="1.0"/>
+</session>

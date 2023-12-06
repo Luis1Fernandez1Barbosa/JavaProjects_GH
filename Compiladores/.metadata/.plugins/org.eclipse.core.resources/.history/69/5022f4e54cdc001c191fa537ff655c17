@@ -1,0 +1,97 @@
+package fes.aragon.compilador;
+import java_cup.runtime.*;
+import java.io.*;
+import java.util.*;
+
+action code{:
+	
+	public void imprimirValor(String str){
+		System.out.println("Valor del token es: " + str + "\n");
+	}
+:};
+
+parser code{:
+	public static TablaSimbolos tabla = new TablaSimbolos();
+	public static Lexico lex;
+	private ArrayList<String> datos=new ArrayList<String>();
+	public parser parserFuente;
+   	
+   	public ArrayList<String> codIntermedio(){
+   		return datos;
+   	}
+	public void syntax_error(Symbol st){
+		System.out.println("Error en la linea "+ lex.getYyline() +
+                    " columna: "+ lex.getYy_currentPos());
+	}
+	public void cargar(String archivo,TablaSimbolos t) throws Exception{	
+		lex=new Lexico(new FileInputStream(new File(archivo)),t);
+		parserFuente=new parser(lex);
+		parserFuente.parse();
+	}
+	
+:};
+
+terminal COLOCA, ARRIBA, ABAJO, DERECHA, IZQUIERDA;
+terminal MOVER, PUNTOYCOMA, REPETIR, VERFRUTA;
+terminal CORABRIR, CORCERRAR, PRINT, ASIG;
+terminal Datos ID;
+terminal Integer NUMERO;
+
+non terminal expr_1,expr_11,expr_12,expr_13;
+non terminal expr_11_0,expr_11_1,expr_11_2;
+non terminal expr_a,expr_b;
+non terminal Integer num;
+
+expr_1 ::=expr_1:e 
+	{:		
+			RESULT=e;
+            System.out.println("Instruccion: "+ e);
+            parser.codIntermedio().add(String.valueOf(e));
+            e.setValor(String.valueOf(e));
+            imprimirValor(String.valueOf(e));
+        :};
+
+asig ::= ID:s expr_1:e 
+        {:
+            RESULT=e; 
+           	parser.codIntermedio().add(String.valueOf(e));
+            s.setValor(String.valueOf(e));
+	:}
+	|ID:s ASIG asig:e 
+        {:
+            RESULT=e;
+            parser.codIntermedio().add(String.valueOf(e));
+            s.setValor(String.valueOf(e));
+	:};		
+	
+expr_1 ::= expr_1 expr_11
+		|expr_1 expr_12
+		|expr_1 expr_13
+		|expr_11
+		|expr_12
+		|expr_13;
+
+expr_11 ::= expr_11_0 PUNTOYCOMA
+		|expr_11_1 PUNTOYCOMA
+		|expr_11_2 PUNTOYCOMA
+		|error {:;:};
+
+expr_11_0 ::= COLOCA num:n1 num:n2;
+
+expr_11_1 ::= ARRIBA
+		|ABAJO
+		|DERECHA
+		|ABAJO;
+
+expr_11_2 ::= MOVER num:n1;
+
+expr_a ::= expr_a expr_11
+		|expr_a expr_13;
+
+expr_b ::= expr_b expr_11
+		|expr_b expr_12;
+
+expr_12 ::= REPETIR num:n1 CORABRIR expr_a CORCERRAR;
+
+expr_13 ::= VERFRUTA CORABRIR expr_b CORCERRAR;
+	

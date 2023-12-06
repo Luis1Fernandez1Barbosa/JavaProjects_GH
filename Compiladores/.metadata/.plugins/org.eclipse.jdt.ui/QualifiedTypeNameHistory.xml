@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="fes.aragon.utilerias.Herramientas"/>
+    <fullyQualifiedTypeName name="fes.aragon.utilerias.Herramientas2"/>
+    <fullyQualifiedTypeName name="fes.aragon.utilerias.ErrorLexico2"/>
+    <fullyQualifiedTypeName name="javax.swing.JFileChooser"/>
+    <fullyQualifiedTypeName name="javax.swing.filechooser.FileNameExtensionFilter"/>
+    <fullyQualifiedTypeName name="fes.aragon.utilerias.Conjunto"/>
+    <fullyQualifiedTypeName name="fes.aragon.utilerias.ErrorLexico"/>
+    <fullyQualifiedTypeName name="java.io.Reader"/>
+    <fullyQualifiedTypeName name="java.io.BufferedReader"/>
+    <fullyQualifiedTypeName name="java.io.FileReader"/>
+    <fullyQualifiedTypeName name="fes.aragon.tokens.Lexico"/>
+    <fullyQualifiedTypeName name="fes.aragon.codigo.ErrorSintactico"/>
+    <fullyQualifiedTypeName name="java.io.FileWriter"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
+    <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.io.Writer"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="java.util.Iterator"/>
+</qualifiedTypeNameHistroy>

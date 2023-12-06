@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;SAB_Sintactico_V3&apos; to &apos;SAB_Ej5_Sintactico_V3&apos;" description="Rename resource &apos;SAB_Sintactico_V3&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/SAB_Sintactico_V3" name="SAB_Ej5_Sintactico_V3" stamp="1651545541300" updateReferences="true"/>
+</session>

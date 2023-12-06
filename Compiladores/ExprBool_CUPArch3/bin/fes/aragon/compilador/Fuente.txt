@@ -1,0 +1,6 @@
+true and false;
+a:=not false;
+not (false and false);
+b:=not true;
+z:=not (a and (not b));
+not z;

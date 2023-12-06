@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;fuente4.txt&apos; to &apos;VersionTres&apos;&#x0D;&#x0A;- Original project: &apos;AFNDCuatro&apos;&#x0D;&#x0A;- Destination element: &apos;VersionTres&apos;&#x0D;&#x0A;- Original element: &apos;fuente4.txt&apos;" description="Copy file" element1="fuente4.txt" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1647716476634" target="/VersionTres" units="0" version="1.0"/>
+</session>

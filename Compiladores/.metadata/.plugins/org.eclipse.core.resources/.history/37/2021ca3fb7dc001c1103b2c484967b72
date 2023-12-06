@@ -1,0 +1,62 @@
+package fes.aragon.compilador;
+import java_cup.runtime.Symbol;
+import java.io.Reader;
+%%
+%{
+	private TablaSimbolos tabla;
+	public Lexico(java.io.InputStream in, TablaSimbolos t){
+		this(in);
+		this.tabla = t;
+	}	
+	public int getYyline() {
+                return yyline;
+        }
+
+        public int getYy_currentPos() {
+            return yy_currentPos-1;
+        }
+%}
+%class Lexico
+%public
+%char
+%line
+%cup
+%ignorecase
+%type java_cup.runtime.Symbol
+//%implements java_cup.runtime.Scanner
+%eofval{
+ return new Symbol(sym.EOF,new String("Fin del archivo"));
+//return null;
+%eofval}
+LETRA= [a-zA-Z]
+DIGITO=[0-9]
+LETRA= [a-zA-Z]
+ID={LETRA}({LETRA}|{DIGITO})*
+INT={DIGITO}+
+%%
+"coloca" {System.out.print("Coloca"); return new Symbol(sym.COLOCA); }
+"arriba" {System.out.println("Arriba"); return new Symbol(sym.ARRIBA); }
+"abajo" {System.out.println("Abajo"); return new Symbol(sym.ABAJO); }
+"derecha" {System.out.println("Derecha"); return new Symbol(sym.DERECHA); }
+"izquierda" {System.out.println("Izquierda"); return new Symbol(sym.IZQUIERDA); }
+"mover" {System.out.print("Mover"); return new Symbol(sym.MOVER); }
+";" {System.out.println("PuntoComa"); return new Symbol(sym.PUNTOYCOMA); }
+"repetir" {System.out.print("Repetir"); return new Symbol(sym.REPETIR); }
+"ver fruta" {System.out.println("Ver Fruta"); return new Symbol(sym.VERFRUTA); }
+"{" {System.out.println("Llave Apertura"); return new Symbol(sym.CORABRIR); }
+"}" {System.out.println("Llave Cierre"); return new Symbol(sym.CORCERRAR); }
+{ID}* {
+		Datos s;
+		if((s = tabla.buscar(yytext())) == null){
+			s = tabla.insertar(yytext());
+		}
+		System.out.println("Variable: "+yytext());
+		return new Symbol(sym.ID, s);
+}
+{INT}+ {
+		System.out.println(" Entero");
+		return new Symbol(sym.NUMERO, new Integer(yytext())); }
+[\t\r\f]  {}
+[\n] {}
+[" "] {}
+. { System.out.println("Caracter no valido. "+yytext()+"-"); }

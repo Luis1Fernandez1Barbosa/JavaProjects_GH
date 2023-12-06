@@ -1,0 +1,46 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package fes.aragon.compilador;
+
+import java.io.File;
+import java.net.URISyntaxException;
+
+
+/**
+ *
+ * @author mash
+ */
+public class Principal {
+    private String ruta;
+
+    public Principal() {
+    }
+
+    public String getRuta() throws URISyntaxException {
+        ruta=this.getClass().getResource("/fes/aragon/compilador/C_Fuente.txt")
+                .toURI().getPath();
+        return ruta;
+    }
+    public static void main(String[] args) {
+        try {
+            TablaSimbolos tabla=new TablaSimbolos();
+            Principal app=new Principal();
+            parser inicio=new parser();
+            inicio.cargar(app.getRuta(), tabla);
+            tabla.imprimir();
+            //Almacenado la informacion
+            Archivo arch = new Archivo(new File(System.getProperty("user.dir") + "/salida.fes"));			
+			arch.escribir(inicio.parserFuente.codIntermedio(), false);
+			Archivo arch1 = new Archivo(new File(System.getProperty("user.dir") + "/C_intermedio.txt"));			
+			arch1.escribir(inicio.parserFuente.codIntermedio(), false);
+
+        } catch (URISyntaxException ex) {
+            ex.printStackTrace();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
+}

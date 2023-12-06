@@ -1,0 +1,8 @@
+coloca 4 4;
+izquierda;
+mover 1;
+arriba;
+mover 1;
+abajo;
+mover 5;
+abajo;
