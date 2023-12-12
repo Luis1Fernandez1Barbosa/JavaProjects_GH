@@ -211,13 +211,16 @@ public class V_main extends javax.swing.JFrame {
     
 //-----------------CLASE PARA LECTURA DE ARCHIVO COMPLEMENTARIO(Base de Conocimiento)-----------------------------------
     public void LeerArc(String pat) {
+        System.out.println("Leyendo archivo");
         String path = new String(pat); //String del nombre del archivo
         //Llamada del archivo
-        File archivo = new File(System.getProperty("user.dir") + ("\\src\\fes\\aragon\\recursos\\" + pat));
+        File archivo = new File(System.getProperty("user.dir") + ("/src/fes/aragon/recursos/" + pat));
+        System.out.println("Procesando");
         try {
             //Scanner input = new Scanner(new File(System.getProperty("user.dir") + ("\\src\\main\\java\\fes\\aragon\\recursos\\" + path)));
             //Lectura del archivo
-            BufferedReader leer =new BufferedReader(new FileReader(archivo));
+            BufferedReader leer;
+            leer = new BufferedReader(new FileReader(archivo));
             String linea=leer.readLine();
             while (linea != null){//input.hasNextLine()) {
                 //String line = input.nextLine();
