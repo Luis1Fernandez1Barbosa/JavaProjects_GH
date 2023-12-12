@@ -219,7 +219,7 @@ public class V_Principal extends javax.swing.JFrame {
     public void LeerArc(String pat) {
         String path = new String(pat); //String del nombre del archivo
         //Llamada del archivo
-        File archivo = new File(System.getProperty("user.dir") + ("\\src\\main\\java\\fes\\aragon\\recursos\\" + pat));
+        File archivo = new File(System.getProperty("user.dir") + ("/src/main/java/fes/aragon/recursos/" + pat));
         try {
             //Scanner input = new Scanner(new File(System.getProperty("user.dir") + ("\\src\\main\\java\\fes\\aragon\\recursos\\" + path)));
             //Lectura del archivo
