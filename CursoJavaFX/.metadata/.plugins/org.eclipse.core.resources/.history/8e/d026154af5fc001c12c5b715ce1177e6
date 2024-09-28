@@ -1,0 +1,5 @@
+package aragon.unam.mx.modelo;
+
+public class Empleado {
+
+}

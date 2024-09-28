@@ -1,0 +1,22 @@
+package aragon.unam.mx.inicio;
+import aragon.unam.mx.modelo.Empleado; 
+import aragon.unam.mx.repositorio.BaseDeDatos; 
+import aragon.unam.mx.servicios.Calcular; 
+import aragon.unam.mx.servicios.Gui; 
+import aragon.unam.mx.servicios.Socket;
+
+public class TestEmpleado {
+	public static void main(String[] args) { 
+		Empleado informacion=new Empleado(); 
+	Calcular oyenteUno=new Calcular(); 
+	Gui oyenteDos=new Gui(); 
+	BaseDeDatos oyenteTres=new BaseDeDatos(); 
+	informacion.agregarOyente(oyenteUno); 
+	informacion.agregarOyente(oyenteDos); 
+	informacion.agregarOyente(oyenteTres); 
+	informacion.agregarOyente(Socket::eventoCambio); 
+	informacion.setNombre("Miguel"); 
+	informacion.setSalario(20.34); 
+	System.out.println("-------"); 
+	informacion.setSalario(10.23); }
+}

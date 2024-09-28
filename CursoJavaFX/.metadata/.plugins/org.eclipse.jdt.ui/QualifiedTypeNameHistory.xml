@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="aragon.unam.mx.repositorio.intf.BaseDeDatosDAO"/>
+    <fullyQualifiedTypeName name="aragon.unam.mx.repositorio.impl.BaseDeDatosDAOImpl"/>
+    <fullyQualifiedTypeName name="java.beans.PropertyChangeListener"/>
+    <fullyQualifiedTypeName name="java.beans.PropertyChangeEvent"/>
+</qualifiedTypeNameHistroy>

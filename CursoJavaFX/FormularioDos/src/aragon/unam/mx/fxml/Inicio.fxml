@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="677.0" style="-fx-background-color: #002847;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <HBox alignment="CENTER" prefHeight="79.0" prefWidth="677.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="61.0" fitWidth="65.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@../../../../../../Formulario/src/aragon/unam/mx/recursos/logo.png" />
+               </image>
+            </ImageView>
+            <Label text="SOLICITUD CRÉDITO PERSONAL" textFill="#e1af0a">
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="63.0" fitWidth="89.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Formulario/src/aragon/unam/mx/recursos/logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-border-color: #AADAE4;">
+               <children>
+                  <Label text="Folio:" textFill="#ebe9e9" />
+                  <TextField fx:id="txtNumFolio" prefHeight="25.0" prefWidth="131.0" promptText="Número de Folio" />
+                  <Label text="Cuenta Cliente:" textFill="#ebe9e9" />
+                  <TextField fx:id="txtNumTrabajador" prefHeight="25.0" prefWidth="131.0" promptText="Número de Trabajador" />
+                  <Label text="Fecha de Solicitud" textFill="#ebe9e9" />
+                  <DatePicker prefHeight="25.0" prefWidth="155.0" promptText="Fecha Actual" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Información del Crédito" textFill="#549df2">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" />
+            <HBox prefHeight="100.0" prefWidth="200.0" />
+            <FlowPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <RadioButton mnemonicParsing="false" text="Femenino" textFill="#f8f5f5">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="grupoSexo" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton mnemonicParsing="false" text="Masculino" textFill="#eee9e9" />
+               </children>
+            </FlowPane>
+            <HBox prefHeight="100.0" prefWidth="200.0" />
+            <FlowPane prefHeight="200.0" prefWidth="200.0" />
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
